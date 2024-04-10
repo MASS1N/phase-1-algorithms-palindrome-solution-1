@@ -1,6 +1,19 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+function reverseString(word) {
+  return word.split("").reverse().join("");
 }
+
+function isPalindrome(word) {
+  return word === reverseString(word);
+}
+
+// Test cases
+console.log(isPalindrome("racecar")); // true
+console.log(isPalindrome("mom")); // true
+console.log(isPalindrome("abba")); // true
+console.log(isPalindrome("a")); // true
+console.log(isPalindrome("hi")); // false
+console.log(isPalindrome("robot")); // false
+
 
 /* 
   Add your pseudocode here
